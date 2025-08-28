@@ -158,11 +158,11 @@ const Register = () => {
 
           {/* OTP Field (shows only after sending OTP) */}
           {otpSent && !otpVerified && (
-            <div className="flex gap-3">
+            <div className="flex flex-col sm:flex-row gap-3">
               <input
                 type="text"
                 placeholder="Enter OTP"
-                className="flex-1 pl-4 pr-4 py-4 border border-gray-600/60 rounded-xl bg-gray-700/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400/50 focus:border-indigo-400"
+                className="flex-1 pl-4 pr-4 py-3 border border-gray-600/60 rounded-xl bg-gray-700/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400/50 focus:border-indigo-400 text-sm sm:text-base"
                 value={otp}
                 onChange={(e) => setOtp(e.target.value)}
               />
@@ -170,9 +170,9 @@ const Register = () => {
                 type="button"
                 onClick={handleVerifyOTP}
                 disabled={!otp || loading}
-                className={`px-5 py-3 rounded-xl font-semibold transition-all duration-300 ${otp && !loading
-                  ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:scale-105'
-                  : 'bg-gray-600 text-gray-300 cursor-not-allowed'
+                className={`px-4 sm:px-5 py-3 rounded-xl font-semibold transition-all duration-300 ${otp && !loading
+                    ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:scale-105'
+                    : 'bg-gray-600 text-gray-300 cursor-not-allowed'
                   }`}
               >
                 Verify OTP
