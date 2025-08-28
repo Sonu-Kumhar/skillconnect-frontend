@@ -9,6 +9,7 @@ const Logout = () => {
     useEffect(() => {
         // ✅ Remove token
         localStorage.removeItem("token");
+        localStorage.removeItem("userEmail");
 
         // ✅ Redirect to login
         navigate("/login");
