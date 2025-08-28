@@ -103,24 +103,13 @@ const AboutPage = () => {
             marginBottom: "30px"
           }}>
             <div
-              style={{
-                width: "70px",
-                height: "70px",
-                // background: "linear-gradient(135deg, #38bdf8, #a855f7)",
-                borderRadius: "50%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "20px",
-                boxShadow: "0 4px 16px rgba(56, 189, 248, 0.3)",
-                overflow: "hidden" // 👈 important to make it circular
-              }}
+              className="w-[60px] h-[60px] sm:w-20 sm:h-20 rounded-full overflow-hidden flex items-center justify-center"
+              style={{ boxShadow: "0 4px 16px rgba(56, 189, 248, 0.3)" }}
             >
               <img
                 src="/bg-removed.png"
-                // src="/skillconnect_logo.png"
                 alt="SkillConnect Logo"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                className="w-full h-full object-cover"
               />
             </div>
             <h1 style={{
