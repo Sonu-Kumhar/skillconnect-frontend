@@ -1,0 +1,75 @@
+
+@import "tailwindcss";
+
+/* index.css or App.css */
+/* body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(to bottom right, #86efac, #bfdbfe, #d8b4fe);
+  background-attachment: fixed; 
+} */
+
+@layer utilities {
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* makes icon white */
+  }
+}
+
+@layer utilities {
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* makes icon white */
+  }
+}
+
+
+/* Dark theme scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;              /* scrollbar width */
+  height: 10px;             /* scrollbar height (for horizontal) */
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e;      /* dark track background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;         /* scrollbar color */
+  border-radius: 5px;       /* rounded edges */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777;         /* hover effect */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;               /* thin scrollbar */
+  scrollbar-color: #555 #1e1e1e;       /* thumb color | track color */
+}
+
+
+/*for buttons */
+.button-fill {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.button-fill::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in;
+  z-index: -1;
+}
+
+.button-fill:hover::before {
+  transform: translateX(0);
+}
+
+.button-fill:active {
+  transform: scale(0.93);         /* More shrink for deeper press */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.7); /* Smaller shadow, darker for depth */
+}
