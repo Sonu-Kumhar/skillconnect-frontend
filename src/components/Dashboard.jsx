@@ -362,7 +362,7 @@ const Dashboard = () => {
           {/* Main animated hero text */}
           <div className="text-center mb-12 relative">
             <div className="relative h-24 md:h-32 overflow-hidden w-full max-w-6xl mx-auto">
-              {heroTexts.map((text, index) => (
+              {heroTexts((text, index) => (
                 <div
                   key={index}
                   className={`absolute inset-0 flex items-center justify-center transition-all duration-1000 px-4 ${index === textIndex
@@ -532,7 +532,7 @@ const Dashboard = () => {
                 <div
                   key={idx}
                   onClick={() => handleCategoryClick(category.name)}
-                  className={`group/tech bg-gradient-to-br ${category.gradient} backdrop-blur-sm rounded-2xl p-5 border-2 ${category.border} transition-all duration-500 ${category.hoverBg} relative overflow-hidden cursor-pointer hover:shadow-lg ${category.cardShadow} hover:scale-105`}
+                  className={`group/tech bg-gradient-to-br ${category.gradient} backdrop-blur-sm rounded-2xl p-5 pl-4 border-2 ${category.border} transition-all duration-500 ${category.hoverBg} relative overflow-hidden cursor-pointer hover:shadow-lg ${category.cardShadow} hover:scale-105`}
                 >
                   <div className={`absolute inset-0 bg-gradient-to-br ${category.overlay} rounded-2xl opacity-0 group-hover/tech:opacity-100 transition-opacity duration-500`}></div>
 
