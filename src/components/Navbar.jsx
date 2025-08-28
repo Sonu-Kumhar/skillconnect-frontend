@@ -14,11 +14,19 @@ const Navbar = () => {
   const location = useLocation();
   const [userEmail, setUserEmail] = useState("");
 
-  useEffect(() => {
-    // Example: if you stored email in localStorage at login
+   useEffect(() => {
+    const token = localStorage.getItem("token");
     const email = localStorage.getItem("userEmail");
-    if (email) setUserEmail(email);
+
+    // only set email if token also exists
+    if (token && email) {
+      setUserEmail(email);
+    } else {
+      setUserEmail("");
+      localStorage.removeItem("userEmail"); // clean up ghost email
+    }
   }, []);
+
 
   const links = [
     { name: "Dashboard", path: "/dashboard", icon: <FaHome /> },
