@@ -104,8 +104,8 @@ const AboutPage = () => {
           }}>
             <div
               style={{
-                width: "80px",
-                height: "80px",
+                width: "70px",
+                height: "70px",
                 // background: "linear-gradient(135deg, #38bdf8, #a855f7)",
                 borderRadius: "50%",
                 display: "flex",
