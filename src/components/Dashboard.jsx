@@ -63,7 +63,7 @@ const Dashboard = () => {
       overlay: "from-purple-400/5 to-violet-400/5"
     },
     {
-      name: "Cybersecurity",
+      name: "Cyber security",
       description: "Ethical Hacking, Network Security",
       emoji: "🔒",
       gradient: "from-pink-500/10 via-rose-500/5 to-pink-500/10",
@@ -303,6 +303,8 @@ const Dashboard = () => {
     setShowAllCategories(!showAllCategories);
   };
 
+  
+
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center px-4 py-10 bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden">
       
@@ -362,7 +364,7 @@ const Dashboard = () => {
           {/* Main animated hero text */}
           <div className="text-center mb-12 relative">
             <div className="relative h-24 md:h-32 overflow-hidden w-full max-w-6xl mx-auto">
-              {heroTexts((text, index) => (
+              {heroTexts.map((text, index) => (
                 <div
                   key={index}
                   className={`absolute inset-0 flex items-center justify-center transition-all duration-1000 px-4 ${index === textIndex
