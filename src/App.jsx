@@ -13,6 +13,7 @@ import Navbar from './components/Navbar';
 import Footer from "./components/Footer";
 import Logout from './components/Logout';
 import About from './components/About';
+import ScrollToTop from './components/ScrollToTop';
 
 function AppContent() {
   const location = useLocation();
@@ -64,6 +65,7 @@ function AppContent() {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <AppContent />
     </BrowserRouter>
   );
