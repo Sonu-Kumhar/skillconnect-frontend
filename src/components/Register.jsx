@@ -81,7 +81,7 @@ const Register = () => {
         <div className="absolute bottom-1/4 left-1/3 w-24 h-24 bg-gradient-to-br from-purple-400/15 to-pink-400/15 rounded-full blur-xl"></div>
       </div>
 
-      <div className="bg-gray-800/90 backdrop-blur-sm p-10 rounded-3xl shadow-2xl w-full max-w-md border border-gray-700/50 relative z-10 transform hover:scale-[1.02] transition-all duration-300 ring-1 ring-gray-600/30">
+      <div className="bg-gray-800/90 backdrop-blur-sm p-10 rounded-3xl shadow-2xl w-full max-w-md border border-gray-700/50 relative z-10 transform transition-all duration-300 ring-1 ring-gray-600/30">
 
         {/* Header */}
         <div className="text-center mb-8">
